@@ -1,14 +1,111 @@
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+
+inoremap jm <Esc>
+
+noremap <C-s> :w<CR>
+noremap <C-q> :q<CR>
+inoremap <C-s> :w<CR>
+inoremap <C-q> :q<CR>
+
+nnoremap tt :NERDTree<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+syntax on
+
+set noswapfile
+set clipboard=unnamed
+set backspace=2
+set cursorline
+"set cursorcolumn
+set textwidth=80
+set linebreak
+set number
+set relativenumber
+set showmode
+set showcmd
 set encoding=utf-8
-set nocompatible " 关闭 vi 兼容模式
-syntax on " 自动语法高亮
-set number " 显示行号
-set cursorline " 突出显示当前行
-set ruler " 打开状态栏标尺
-set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
-set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
-set tabstop=4 " 设定 tab 长度为 4
-set incsearch " 输入搜索内容时就显示搜索结果
-set hlsearch " 搜索时高亮显示
-set smartindent " 开启新行时使用智能自动缩进
+"set nocompatible
+set laststatus=2
+set ruler
+set undofile
+set history=999
+
+"set mouse=a
+"set selection=exclusive
+"set selectmode=mouse,key
+
+set listchars=tab:»■,trail:■
+set list
+
+set wildmenu
+set wildmode=longest:list,full
+
+set showmatch
+set hlsearch
+set incsearch
+
+set tabstop=4
+set expandtab
+set softtabstop=4
+set autoindent
+set shiftwidth=4
+set showtabline=2
+set ignorecase
+set incsearch
+
+filetype on
+filetype indent on
+filetype plugin on
+
+call plug#begin('~/.config/nvim/plugged')
+    Plug 'scrooloose/nerdtree'
+
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'nsf/gocode'
+
+    Plug 'valloric/youcompleteme'
+
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'junegunn/vim-easy-align'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
+    Plug 'majutsushi/tagbar'
+    Plug 'tomtom/tcomment_vim'
+call plug#end()
+noremap <F8> :TagbarToggle<CR>
+let NERDTreeChDirMode=2
+
+let g:ctrlp_by_filename = 1
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|tmp$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
