@@ -12,7 +12,7 @@ git clone https://github.com/tmux-plugins/tmux-continuum.git
 ```
 
 ### tmux cmd内
-```
+```shell
 tmux source-file ~/.tmux.conf
 ```
 
