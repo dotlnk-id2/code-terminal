@@ -11,4 +11,9 @@ git clone https://github.com/tmux-plugins/tmux-resurrect.git
 git clone https://github.com/tmux-plugins/tmux-continuum.git
 ```
 
+### tmux cmd内
+```
+tmux source-file ~/.tmux.conf
+```
+
 ## kitty
