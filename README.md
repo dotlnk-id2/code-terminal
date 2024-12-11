@@ -16,4 +16,8 @@ git clone https://github.com/tmux-plugins/tmux-continuum.git
 tmux source-file ~/.tmux.conf
 ```
 
-## kitty
+## wezterm
+
+
+## tabby
+
