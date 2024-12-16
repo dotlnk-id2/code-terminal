@@ -11,7 +11,7 @@ config.font =wezterm.font('JetBrains Mono', { weight = 'Bold', italic = false })
 config.font_size = 11
 config.window_frame = {
   font =wezterm.font('JetBrains Mono', { weight = 'Bold'}),
-  font_size = 11,
+  font_size = 9,
 }
 -- and finally, return the configuration to wezterm
 return config
