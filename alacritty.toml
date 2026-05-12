@@ -1,0 +1,16 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+]
+
+[window]
+dimensions = { columns = 100, lines = 70 }                  # 初始大小
+padding = { x = 0, y = 0 }                                  # 内边距
+decorations = "full"                                        # 窗口装饰 (full/none/transparent)
+
+[font]
+size = 10.0
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+vi_mode_style = { shape = "Beam" }
