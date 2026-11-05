@@ -1,13 +1,13 @@
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-
-inoremap jm <Esc>
+""noremap <Left> <Nop>
+""noremap <Right> <Nop>
+""noremap <Up> <Nop>
+""noremap <Down> <Nop>
+""inoremap <Left> <Nop>
+""inoremap <Right> <Nop>
+""inoremap <Up> <Nop>
+""inoremap <Down> <Nop>
+""
+""inoremap jm <Esc>
 
 
 syntax on
@@ -40,11 +40,11 @@ set showmatch
 set hlsearch
 set incsearch
 
-set tabstop=4
-set expandtab
+""set tabstop=4
+""set expandtab
 set softtabstop=4
 set autoindent
-set shiftwidth=4
+""set shiftwidth=4
 set showtabline=2
 set ignorecase
 set incsearch
