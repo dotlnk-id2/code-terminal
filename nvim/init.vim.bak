@@ -9,10 +9,6 @@ inoremap <Down> <Nop>
 
 inoremap jm <Esc>
 
-noremap <C-s> :w<CR>
-noremap <C-q> :q<CR>
-inoremap <C-s> :w<CR>
-inoremap <C-q> :q<CR>
 
 syntax on
 
@@ -53,25 +49,6 @@ set showtabline=2
 set ignorecase
 set incsearch
 
-filetype on
-filetype indent on
-filetype plugin on
 
-call plug#begin('~/.config/nvim/plugged')
-    Plug 'scrooloose/nerdtree'
 
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'nsf/gocode'
 
-    Plug 'valloric/youcompleteme'
-
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-
-    Plug 'junegunn/vim-easy-align'
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-repeat'
-    Plug 'majutsushi/tagbar'
-    Plug 'tomtom/tcomment_vim'
-call plug#end()
